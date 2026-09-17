@@ -14,7 +14,7 @@ function getMenu() {
     // BUG (menu): the wrap image was renamed during a redesign but the data
     // still points to the old PNG path, so the menu renders a broken image.
     if (item.id === 'm2' && !mode.isFixed()) {
-      return { ...item, image: '/img/paneer-tikka-wrap.png' };
+      return { ...item, image: '/img/wrap.svg' };
     }
     return item;
   });
