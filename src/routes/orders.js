@@ -37,6 +37,7 @@ function priceItems(items) {
 }
 
 router.post('/orders', (req, res) => {
+  if (!req.body || typeof req.body.customer !== 'object') return res.status(400).json({ error: 'customer is required' });
   const body = req.body;
 
   if (mode.isFixed()) {
